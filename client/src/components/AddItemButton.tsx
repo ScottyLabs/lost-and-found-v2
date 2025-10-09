@@ -106,7 +106,7 @@ function AddItemButton(props: {
   const buildplace = () => {
     //determine location of user
     const build = props.permissions[0].split(":")[0];
-    if (build == "ALL") return "";
+    if (build == "ALL") return "CUC";
     else return build; //returns building permission
   };
 
