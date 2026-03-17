@@ -67,7 +67,7 @@ export default function BulkArchiveButton(props: { fetchItems: () => void }) {
             axios
               .post("/api/items/archiveByDays", {
                 token: localStorage.getItem("lnf_token"),
-                days: 90,
+                days: 60,
               })
               .then(
                 (res) => {
