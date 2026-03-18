@@ -147,12 +147,12 @@ function Policies() {
                           Identifiable property will be held at the Cohon
                           University Center Information Desk. The owner will be
                           notified and the property will be held for a minimum
-                          of 90 days.
+                          of 60 days.
                         </li>
                         <li>
                           Unidentifiable property will be documented via a
                           public “lost and found” website, and the property will
-                          be held for a minimum of 90 days.
+                          be held for a minimum of 60 days.
                         </li>
                         <li>
                           If unclaimed, all property may be donated, given away,
