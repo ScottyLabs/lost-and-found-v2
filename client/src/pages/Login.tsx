@@ -98,8 +98,10 @@ function Login() {
                     "message",
                     (event) => {
                       if (event.origin !== "https://login.scottylabs.org") {
+                        console.error("Invalid origin", event);
                         return;
                       } else if (event.data === "error") {
+                        console.error("Invalid origin", event);
                         setLoading(false);
                       } else {
                         window.localStorage.setItem("lnf_token", event.data);
