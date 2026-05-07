@@ -97,11 +97,7 @@ function Login() {
                   window?.addEventListener(
                     "message",
                     (event) => {
-                      console.info("origin", event.origin);
-                      if (
-                        event.origin !== "https://login.scottylabs.org" &&
-                        event.origin !== "https://lostandfound.andrew.cmu.edu"
-                      ) {
+                      if (event.origin !== "https://login.scottylabs.org") {
                         return;
                       } else if (event.data === "error") {
                         console.error("Error", event);
