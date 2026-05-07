@@ -97,11 +97,14 @@ function Login() {
                   window?.addEventListener(
                     "message",
                     (event) => {
-                      if (event.origin !== "https://login.scottylabs.org") {
-                        console.error("Invalid origin", event);
+                      console.info("origin", event.origin);
+                      if (
+                        event.origin !== "https://login.scottylabs.org" &&
+                        event.origin !== "https://lostandfound.andrew.cmu.edu"
+                      ) {
                         return;
                       } else if (event.data === "error") {
-                        console.error("Invalid origin", event);
+                        console.error("Error", event);
                         setLoading(false);
                       } else {
                         window.localStorage.setItem("lnf_token", event.data);
