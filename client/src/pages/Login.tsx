@@ -26,13 +26,13 @@ function Login() {
     const width = window.innerWidth
       ? window.innerWidth
       : document.documentElement.clientWidth
-        ? document.documentElement.clientWidth
-        : window.screen.width;
+      ? document.documentElement.clientWidth
+      : window.screen.width;
     const height = window.innerHeight
       ? window.innerHeight
       : document.documentElement.clientHeight
-        ? document.documentElement.clientHeight
-        : window.screen.height;
+      ? document.documentElement.clientHeight
+      : window.screen.height;
 
     const systemZoom = width / window.screen.availWidth;
     const left = (width - w) / 2 / systemZoom + dualScreenLeft;
@@ -46,7 +46,7 @@ function Login() {
       height=${h / systemZoom}, 
       top=${top}, 
       left=${left}
-      `,
+      `
     );
 
     newWindow?.focus();
@@ -81,7 +81,7 @@ function Login() {
                   const loginWindow = popupCenter(
                     "Login with CMU Email",
                     400,
-                    600,
+                    600
                   );
                   axios.get("/api/auth/signRequest").then((response) => {
                     if (response.data.token) {
@@ -98,10 +98,8 @@ function Login() {
                     "message",
                     (event) => {
                       if (event.origin !== "https://login.scottylabs.org") {
-                        console.error("Invalid origin", event);
                         return;
                       } else if (event.data === "error") {
-                        console.error("Error", event);
                         setLoading(false);
                       } else {
                         window.localStorage.setItem("lnf_token", event.data);
@@ -119,7 +117,7 @@ function Login() {
                           });
                       }
                     },
-                    false,
+                    false
                   );
                 }}
               >
